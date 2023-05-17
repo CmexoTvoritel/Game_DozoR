@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrationFragment"
+    tools:context=".presentation.ui.fragments.RegistrationFragment"
     android:background="@drawable/ic_registration_login_form_bg"
     >
 
@@ -169,7 +169,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/materialButton"
+                android:id="@+id/signInAccountButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -184,7 +184,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/checkNotUnLog" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/goToRegistrationText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
