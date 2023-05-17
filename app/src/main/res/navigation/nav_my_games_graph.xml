@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_my_games_graph"
+    app:startDestination="@id/myGamesFragment">
+
+    <fragment
+        android:id="@+id/myGamesFragment"
+        android:name="com.example.gamedozor.presentation.ui.fragments.MyGamesFragment"
+        android:label="fragment_my_games"
+        tools:layout="@layout/fragment_my_games" />
+</navigation>

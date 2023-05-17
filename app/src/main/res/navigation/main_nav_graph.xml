@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_registrationFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registrationFragment_to_nav_profile_graph"
+            app:destination="@id/nav_profile_graph" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -22,5 +25,12 @@
         <action
             android:id="@+id/action_loginFragment_to_registrationFragment"
             app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_nav_profile_graph"
+            app:destination="@id/nav_profile_graph" />
     </fragment>
+    <include app:graph="@navigation/nav_profile_graph" />
+    <include app:graph="@navigation/nav_available_games_graph" />
+    <include app:graph="@navigation/nav_chats_graph" />
+    <include app:graph="@navigation/nav_my_games_graph" />
 </navigation>
