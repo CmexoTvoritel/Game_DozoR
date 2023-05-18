@@ -4,19 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ui.fragments.MyGamesFragment">
+    tools:context=".presentation.ui.fragments.MyGamesFragment"
+    android:background="#020A2C">
 
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="170dp"
-        android:layout_marginTop="297dp"
-        android:layout_marginEnd="183dp"
-        android:layout_marginBottom="415dp"
-        android:text="MY GAAAMES"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="30dp"
+        android:text="Мои игры"
+        android:textSize="25sp"
+        android:textColor="#B3FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
