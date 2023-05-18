@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/profile_menu"
+        android:enabled="true"
+        android:icon="@drawable/ic_user_regform"
+        android:title="Профиль"
+        />
+
+    <item
+        android:id="@+id/available_games_menu"
+        android:enabled="true"
+        android:icon="@drawable/ic_available_games_botom_bar"
+        android:title="Доступные игры"
+        />
+
+    <item
+        android:id="@+id/chats_menu"
+        android:enabled="true"
+        android:icon="@drawable/ic_chat_bottom_bar"
+        android:title="Чат"
+        />
+
+    <item
+        android:id="@+id/my_games_menu"
+        android:enabled="true"
+        android:icon="@drawable/ic_my_games_bottom_bar"
+        android:title="Мои игры"
+        />
+
+</menu>
