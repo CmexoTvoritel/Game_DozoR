@@ -3,11 +3,8 @@ package com.example.gamedozor.presentation.ui.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.core.view.isVisible
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
 import com.example.gamedozor.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -23,10 +20,12 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
 
         bottomNavigationView = findViewById(R.id.bottomNavigationBar)
+        setupBottomNavigationBar()
+    }
 
+    private fun setupBottomNavigationBar() {
         bottomNavigationView.visibility = View.GONE
-
-        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+        bottomNavigationView.setOnItemSelectedListener { item ->
             when(item.itemId) {
                 R.id.profile_menu -> {
                     navController.setGraph(R.navigation.nav_profile_graph)
@@ -47,6 +46,6 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
-
     }
+
 }
