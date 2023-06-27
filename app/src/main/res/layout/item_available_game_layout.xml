@@ -5,21 +5,23 @@
     android:id="@+id/cardGame"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:backgroundTint="#6C4AB2"
+    android:backgroundTint="#162257"
     android:layout_marginHorizontal="7dp"
     android:layout_marginVertical="15dp"
     app:cardCornerRadius="30dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp">
 
         <ImageView
             android:id="@+id/avatarGame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
+            app:tint="#B3FFFFFF"
             android:src="@drawable/ic_game_avatar_placeholder"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -29,10 +31,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="Сумасшедший кролик"
-            android:textColor="#000000"
+            android:textColor="#B3FFFFFF"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/avatarGame"
@@ -45,7 +47,7 @@
             android:layout_marginStart="20dp"
             android:gravity="center"
             android:text="3 | 8"
-            android:textColor="#000000"
+            android:textColor="#B3FFFFFF"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/avatarGame"
@@ -59,7 +61,7 @@
             android:layout_marginEnd="20dp"
             android:gravity="center"
             android:text="28.05.2023"
-            android:textColor="@color/black"
+            android:textColor="#B3FFFFFF"
             android:textSize="17sp"
             app:layout_constraintEnd_toStartOf="@+id/totalTeams"
             app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +75,7 @@
             android:layout_marginEnd="20dp"
             android:gravity="center"
             android:text="18:00"
-            android:textColor="@color/black"
+            android:textColor="#B3FFFFFF"
             android:textSize="17sp"
             app:layout_constraintEnd_toStartOf="@+id/totalTeams"
             app:layout_constraintStart_toStartOf="parent"
@@ -84,14 +86,26 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="15dp"
             android:backgroundTint="@color/black"
-            app:cornerRadius="10dp"
             android:text="Sing Up"
+            android:textColor="#B3FFFFFF"
             android:textSize="20sp"
+            app:cornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textDataGame"
             app:layout_constraintTop_toBottomOf="@+id/totalTeams" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="100dp"
+            android:src="@drawable/ic_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTimeGame" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

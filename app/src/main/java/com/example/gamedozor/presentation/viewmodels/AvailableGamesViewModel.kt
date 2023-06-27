@@ -7,6 +7,6 @@ import com.example.gamedozor.presentation.models.AvailableGamesModel
 class AvailableGamesViewModel : ViewModel() {
 
     fun addGamesToRV() = listOf(
-        AvailableGamesModel("Crazy cat", 0, 0, "01:01:2002", "18:00"),
-        AvailableGamesModel("Fcking rabbit", 0, 0, "10:02:2003", "19:00"))
+        AvailableGamesModel("Crazy cat", 2, 7, "01:01:2002", "18:00"),
+        AvailableGamesModel("Big rabbit", 3, 10, "10:02:2003", "19:00"))
 }

@@ -35,8 +35,15 @@ class AvailableGamesFragment : Fragment() {
         viewModel = ViewModelProvider(this)[AvailableGamesViewModel::class.java]
         recyclerView = binding.rvAvailableGames
         adapter = AvailableGamesAdapter(viewModel.addGamesToRV())
+        bindButtons()
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = adapter
+    }
+
+    private fun bindButtons() {
+        adapter.clickCallbackSignUp = { _ ->
+            //TODO sing up to game function
+        }
     }
 
 }
