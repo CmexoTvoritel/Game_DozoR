@@ -16,11 +16,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        setNavGraph()
+        setupBottomNavigationBar()
+    }
+
+    private fun setNavGraph() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.navMainHostActivity) as NavHostFragment
         navController = navHostFragment.navController
-
         bottomNavigationView = findViewById(R.id.bottomNavigationBar)
-        setupBottomNavigationBar()
     }
 
     private fun setupBottomNavigationBar() {
