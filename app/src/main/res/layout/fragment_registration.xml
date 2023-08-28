@@ -60,16 +60,26 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/nameRegForm"
+            <TextView
+                android:id="@+id/errorMessage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
+                android:text="Error"
+                android:visibility="gone"
+                android:textColor="#ba0d1b"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/nameRegForm"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView">
+                app:layout_constraintTop_toBottomOf="@+id/errorMessage">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/imageCard1"
@@ -93,11 +103,14 @@
 
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="200dp"
-                    android:layout_height="40dp"
+                    android:id="@+id/inputName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="3dp"
                     android:background="#485457"
+                    android:gravity="start|center"
                     android:textColorHint="#B3FFFFFF"
+                    app:endIconMode="clear_text"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageCard1"
@@ -106,9 +119,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:hint="Имя"
-                        android:textSize="20sp" />
+                        android:hint="Имя" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -116,10 +127,9 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/surnameRegForm"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -147,11 +157,14 @@
 
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="200dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="3dp"
+                    android:id="@+id/inpurSurname"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="5dp"
                     android:background="#485457"
                     android:textColorHint="#B3FFFFFF"
+                    app:endIconMode="clear_text"
+                    android:gravity="start|center"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageCard2"
@@ -160,9 +173,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:hint="Фамилия"
-                        android:textSize="20sp" />
+                        android:hint="Фамилия" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -170,10 +181,9 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/emailRegForm"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -201,11 +211,14 @@
 
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="200dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="3dp"
+                    android:id="@+id/inputEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="5dp"
                     android:background="#485457"
                     android:textColorHint="#B3FFFFFF"
+                    app:endIconMode="clear_text"
+                    android:gravity="start|center"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageCard3"
@@ -214,9 +227,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:hint="Почта"
-                        android:textSize="20sp" />
+                        android:hint="Почта" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -224,10 +235,9 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/numberRegForm"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -255,11 +265,14 @@
 
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="200dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="3dp"
+                    android:id="@+id/inputPhoneNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="5dp"
                     android:background="#485457"
                     android:textColorHint="#B3FFFFFF"
+                    app:endIconMode="clear_text"
+                    android:gravity="start|center"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageCard4"
@@ -268,9 +281,8 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:hint="Номер телефона"
-                        android:textSize="20sp" />
+                        android:inputType="phone" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -278,10 +290,9 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/passwordRegForm"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -309,22 +320,24 @@
 
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="200dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="3dp"
+                    android:id="@+id/inputPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="5dp"
                     android:background="#485457"
+                    android:gravity="center|start"
+                    android:hint="Пароль"
                     android:textColorHint="#B3FFFFFF"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageCard5"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:passwordToggleEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:hint="Пароль"
-                        android:textSize="20sp" />
+                        android:inputType="textPassword" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -332,10 +345,9 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/confirmPasswordRegForm"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -363,22 +375,25 @@
 
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="200dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="3dp"
+                    android:id="@+id/inputConfrimPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="5dp"
                     android:background="#485457"
+                    android:gravity="start|center"
+                    android:hint="Пароль"
                     android:textColorHint="#B3FFFFFF"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageCard6"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:passwordToggleEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:hint="Пароль"
-                        android:textSize="20sp" />
+                        android:inputType="textPassword"
+                        android:textColor="#B3FFFFFF" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
