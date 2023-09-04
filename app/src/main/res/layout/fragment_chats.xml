@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ui.fragments.ChatsFragment"
+    tools:context=".presentation.ui.fragments.FChats.ChatsFragment"
     android:background="#020A2C">
 
 

@@ -1,9 +1,12 @@
 package com.example.gamedozor.di
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
 class MyApp: Application() {
 
-    lateinit var appComponent: AppComponent
+    private lateinit var appComponent: AppComponent
 
     override fun onCreate() {
         super.onCreate()
