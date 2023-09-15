@@ -14,7 +14,7 @@ import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [AppModule::class])
+@Component(modules = [AppModule::class, UserModule::class])
 interface AppComponent {
 
     @Component.Factory
@@ -27,13 +27,5 @@ interface AppComponent {
 @Module
 @InstallIn(SingletonComponent::class)
 class AppModule {
-
-    @Singleton
-    @Provides
-    fun provideUserDao(@ApplicationContext context: Context) = Room.databaseBuilder(
-        context = context,
-        klass = UserDatabase::class.java,
-        name = "user_database"
-    ).build().userDao()
 
 }

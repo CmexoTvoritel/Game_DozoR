@@ -60,8 +60,7 @@ class ProfileFragment : Fragment() {
 
     @SuppressLint("SetTextI18n")
     private fun showInformation() = CoroutineScope(Dispatchers.IO).launch {
-        val authToken: String = "" //TODO: GET FROM DB AND USE VIEWMODEL FOR THAT SHIT
-
+        val authToken: String = viewModel.getAuthToken()
         val infoAboutUser = viewModel.getDataAboutUser(authToken = authToken)
         withContext(Dispatchers.Main) {
             lName.text = infoAboutUser.name + " " + infoAboutUser.surname

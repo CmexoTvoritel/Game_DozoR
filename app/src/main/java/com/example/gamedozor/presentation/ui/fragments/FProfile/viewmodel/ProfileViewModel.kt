@@ -2,7 +2,7 @@ package com.example.gamedozor.presentation.ui.fragments.FProfile.viewmodel
 
 
 import androidx.lifecycle.ViewModel
-import com.example.gamedozor.data.db.repository.UserRepository
+import com.example.gamedozor.data.db.repository.UserDao
 import com.example.gamedozor.di.Profile.ProfileInformation
 import com.example.gamedozor.presentation.ui.fragments.FProfile.model.ProfileModel
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -11,11 +11,15 @@ import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel
-class ProfileViewModel @Inject constructor(private val api: ProfileInformation) : ViewModel() {
+class ProfileViewModel @Inject constructor(
+    private val api: ProfileInformation,
+    private val userDao: UserDao) : ViewModel() {
 
-    init {
-        //TODO:
+    suspend fun getAuthToken() : String = withContext(Dispatchers.Default) {
+        val listOfUsers = userDao.getAllUsers()
+        return@withContext "Bearer ${listOfUsers[0].authToken}"
     }
+
     suspend fun getDataAboutUser(authToken: String) : ProfileModel = withContext(Dispatchers.Main) {
         var answer : ProfileModel
         val userInformation = api.getUserInfo(authToken = authToken)
