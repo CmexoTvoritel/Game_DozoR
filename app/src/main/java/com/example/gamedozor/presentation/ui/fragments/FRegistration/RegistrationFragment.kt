@@ -19,10 +19,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 
 @AndroidEntryPoint
@@ -34,7 +31,11 @@ class RegistrationFragment : Fragment() {
 
     private val viewModel: RegistrationViewModel by viewModels()
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         binding = FragmentRegistrationBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -48,17 +49,25 @@ class RegistrationFragment : Fragment() {
 
     private fun setupObserver() = viewLifecycleOwner.lifecycleScope.launch {
         viewModel.response.collect{ state ->
-            if (state == UIState.SUCCESS) {
-                findNavController().setGraph(R.navigation.nav_profile_graph)
-                    val bottomNavigationView =
-                        requireActivity().findViewById<BottomNavigationView>(R.id.bottomNavigationBar)
-                    bottomNavigationView.visibility = View.VISIBLE
-            } else if(state == UIState.FAILED) {
-                binding.errorMessage.visibility = View.VISIBLE
-            } else {
-                //TODO : loading ICON
+            when (state) {
+                UIState.SUCCESS -> {
+                    goToNextScreen()
+                }
+                UIState.FAILED -> {
+                    binding.errorMessage.visibility = View.VISIBLE
+                }
+                else -> {
+                    //TODO : loading ICON
+                }
             }
         }
+    }
+
+    private fun goToNextScreen() {
+        findNavController().setGraph(R.navigation.nav_profile_graph)
+        val bottomNavigationView =
+            requireActivity().findViewById<BottomNavigationView>(R.id.bottomNavigationBar)
+        bottomNavigationView.visibility = View.VISIBLE
     }
 
     private fun setupView() {

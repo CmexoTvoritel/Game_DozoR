@@ -6,8 +6,9 @@ import com.example.gamedozor.di.scopes.FragmentScope
 import dagger.hilt.android.scopes.ViewModelScoped
 import retrofit2.Response
 import javax.inject.Inject
+import javax.inject.Singleton
 
-@ViewModelScoped
+@Singleton
 class LoginApiInformation @Inject constructor(private val api: LoginService) {
 
     suspend fun loginUser(userLogin: String, password: String): Response<LoginModel> =

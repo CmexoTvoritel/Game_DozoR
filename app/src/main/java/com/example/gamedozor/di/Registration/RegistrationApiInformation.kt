@@ -6,8 +6,9 @@ import com.example.gamedozor.di.scopes.FragmentScope
 import dagger.hilt.android.scopes.ViewModelScoped
 import retrofit2.Response
 import javax.inject.Inject
+import javax.inject.Singleton
 
-@ViewModelScoped
+@Singleton
 class RegistrationApiInformation @Inject constructor(private val api: RegService) {
 
     suspend fun regUser(user: RegModel): Response<RegModel> = api.registerUser(user)

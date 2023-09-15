@@ -12,13 +12,14 @@ import dagger.hilt.android.scopes.ViewModelScoped
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Singleton
 
 @Module
-@InstallIn(ViewModelComponent::class)
+@InstallIn(SingletonComponent::class)
 class RegistrationModule {
 
     @Provides
-    @ViewModelScoped
+    @Singleton
     fun provideRegService(): RegService {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)

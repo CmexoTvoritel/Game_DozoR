@@ -8,16 +8,19 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.gamedozor.R
 import com.example.gamedozor.data.db.model.UserEntity
 import com.example.gamedozor.data.db.repository.UserDao
 import com.example.gamedozor.databinding.FragmentLoginBinding
+import com.example.gamedozor.presentation.ui.UIState
 import com.example.gamedozor.presentation.ui.fragments.FLogin.viewmodel.LoginViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -30,7 +33,11 @@ class LoginFragment : Fragment() {
 
     private val viewModel: LoginViewModel by viewModels()
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -44,6 +51,29 @@ class LoginFragment : Fragment() {
     private fun setupView() {
         buttonLogin = binding.signInAccountButton
         buttonToRegistrationFragment = binding.goToRegistrationText
+
+        lifecycleScope.launch {
+            viewModel.response.collect {state ->
+                when(state) {
+                    UIState.SUCCESS -> {
+                        goToNextScreen()
+                    }
+                    UIState.FAILED -> {
+                        //TODO: Excpetion
+                    }
+                    else -> {
+                        //TODO:
+                    }
+                }
+            }
+        }
+    }
+
+    private fun goToNextScreen() {
+        findNavController().setGraph(R.navigation.nav_profile_graph)
+        val bottomNavigationView =
+            requireActivity().findViewById<BottomNavigationView>(R.id.bottomNavigationBar)
+        bottomNavigationView.visibility = View.VISIBLE
     }
 
     private fun setClickToButtons() {
@@ -54,17 +84,9 @@ class LoginFragment : Fragment() {
         buttonLogin.setOnClickListener {
             val username = binding.inputEmail.editText?.text.toString()
             val password = binding.InputPassword.editText?.text.toString()
-            CoroutineScope(Dispatchers.Main).launch {
-                val answerOfLogin = viewModel.loginUserInApp(userLogin = username, userPassword = password)
-                if(answerOfLogin.isValide) {
-                    findNavController().setGraph(R.navigation.nav_profile_graph)
-                    val bottomNavigationView =
-                        requireActivity().findViewById<BottomNavigationView>(R.id.bottomNavigationBar)
-                    bottomNavigationView.visibility = View.VISIBLE
-                }
-                else {
-                    //TODO: Exception while login
-                }
+
+            lifecycleScope.launch {
+                viewModel.loginUserInApp(userLogin = username, userPassword = password)
             }
         }
     }

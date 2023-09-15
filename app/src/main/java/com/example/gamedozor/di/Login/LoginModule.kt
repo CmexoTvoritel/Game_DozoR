@@ -12,12 +12,13 @@ import dagger.hilt.android.scopes.ViewModelScoped
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Singleton
 
 @Module
-@InstallIn(ViewModelComponent::class)
+@InstallIn(SingletonComponent::class)
 class LoginModule {
 
-    @ViewModelScoped
+    @Singleton
     @Provides
     fun provideLoginService(): LoginService {
         return Retrofit.Builder()

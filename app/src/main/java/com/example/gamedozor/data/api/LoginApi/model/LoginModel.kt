@@ -1,6 +1,10 @@
 package com.example.gamedozor.data.api.LoginApi.model
 
+import com.google.gson.annotations.SerializedName
+
 data class LoginModel(
-    val access_token: String,
-    val token_type: String,
+    @SerializedName("access_token")
+    val accessToken: String,
+    @SerializedName("token_type")
+    val tokenType: String,
 )
