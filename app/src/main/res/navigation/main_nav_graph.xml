@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="com.example.gamedozor.presentation.ui.fragments.FRegistration.RegistrationFragment"
+        android:name="com.example.gamedozor.presentation.ui.fragments.registration.RegistrationFragment"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.gamedozor.presentation.ui.fragments.FLogin.LoginFragment"
+        android:name="com.example.gamedozor.presentation.ui.fragments.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action

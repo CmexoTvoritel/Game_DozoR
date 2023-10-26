@@ -9,5 +9,4 @@ data class UserEntity(
     val userLogin: String,
     val userPassword: String,
     val alwaysLogin: Boolean,
-    val authToken: String,
 )

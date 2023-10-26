@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ui.fragments.FRegistration.RegistrationFragment"
+    tools:context=".presentation.ui.fragments.registration.RegistrationFragment"
     android:background="@drawable/ic_registration_login_form_bg"
     >
 
@@ -92,27 +92,21 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <com.google.android.material.textfield.TextInputLayout
+                <EditText
                     android:id="@+id/inputEmail"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_marginStart="3dp"
                     android:background="#485457"
                     android:textColorHint="#B3FFFFFF"
-                    android:gravity="start|center"
+                    android:gravity="center"
                     app:endIconMode="clear_text"
+                    android:hint="Логин"
+                    android:inputType="textEmailAddress"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageCard3"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:inputType="textEmailAddress"
-                        android:hint="Почта" />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                    app:layout_constraintTop_toTopOf="parent"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -148,27 +142,21 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <com.google.android.material.textfield.TextInputLayout
+                <EditText
                     android:id="@+id/InputPassword"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_marginStart="3dp"
                     android:background="#485457"
                     android:textColorHint="#B3FFFFFF"
-                    android:gravity="start|center"
+                    android:gravity="center"
+                    android:hint="Пароль"
+                    android:inputType="textPassword"
                     app:endIconMode="password_toggle"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageCard5"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:inputType="textPassword"
-                        android:hint="Пароль" />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                    app:layout_constraintTop_toTopOf="parent"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

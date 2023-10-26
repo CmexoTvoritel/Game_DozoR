@@ -7,7 +7,32 @@
 
     <fragment
         android:id="@+id/chatsFragment"
-        android:name="com.example.gamedozor.presentation.ui.fragments.FChats.ChatsFragment"
+        android:name="com.example.gamedozor.presentation.ui.fragments.chats.ChatsFragment"
         android:label="fragment_chats"
-        tools:layout="@layout/fragment_chats" />
+        tools:layout="@layout/fragment_chats" >
+        <action
+            android:id="@+id/action_chatsFragment_to_hintsFragment"
+            app:destination="@id/hintsFragment" />
+        <action
+            android:id="@+id/action_chatsFragment_to_teamChatFragment"
+            app:destination="@id/teamChatFragment" />
+        <action
+            android:id="@+id/action_chatsFragment_to_mainChatFragment"
+            app:destination="@id/mainChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hintsFragment"
+        android:name="com.example.gamedozor.presentation.ui.fragments.hints.HintsFragment"
+        android:label="fragment_hints"
+        tools:layout="@layout/fragment_hints" />
+    <fragment
+        android:id="@+id/teamChatFragment"
+        android:name="com.example.gamedozor.TeamChatFragment"
+        android:label="fragment_team_chat"
+        tools:layout="@layout/fragment_team_chat" />
+    <fragment
+        android:id="@+id/mainChatFragment"
+        android:name="com.example.gamedozor.MainChatFragment"
+        android:label="fragment_main_chat"
+        tools:layout="@layout/fragment_main_chat" />
 </navigation>

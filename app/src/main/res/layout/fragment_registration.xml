@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ui.fragments.FRegistration.RegistrationFragment"
+    tools:context=".presentation.ui.fragments.registration.RegistrationFragment"
     android:background="@drawable/ic_registration_login_form_bg"
     >
 
@@ -101,27 +101,21 @@
 
                 </androidx.cardview.widget.CardView>
 
-
-                <com.google.android.material.textfield.TextInputLayout
+                <EditText
                     android:id="@+id/inputName"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_marginStart="3dp"
                     android:background="#485457"
-                    android:gravity="start|center"
+                    android:gravity="center"
                     android:textColorHint="#B3FFFFFF"
                     app:endIconMode="clear_text"
+                    android:hint="Имя"
+                    android:inputType="text"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageCard1"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="Имя" />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                    app:layout_constraintTop_toTopOf="parent"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -156,7 +150,7 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <com.google.android.material.textfield.TextInputLayout
+                <EditText
                     android:id="@+id/inpurSurname"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -164,18 +158,12 @@
                     android:background="#485457"
                     android:textColorHint="#B3FFFFFF"
                     app:endIconMode="clear_text"
-                    android:gravity="start|center"
+                    android:gravity="center"
+                    android:hint="Фамилия"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageCard2"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="Фамилия" />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                    app:layout_constraintTop_toTopOf="parent"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -210,7 +198,7 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <com.google.android.material.textfield.TextInputLayout
+                <EditText
                     android:id="@+id/inputEmail"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -218,18 +206,13 @@
                     android:background="#485457"
                     android:textColorHint="#B3FFFFFF"
                     app:endIconMode="clear_text"
-                    android:gravity="start|center"
+                    android:gravity="center"
+                    android:hint="Почта"
+                    android:inputType="textEmailAddress"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageCard3"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="Почта" />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                    app:layout_constraintTop_toTopOf="parent"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -264,7 +247,7 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <com.google.android.material.textfield.TextInputLayout
+                <EditText
                     android:id="@+id/inputPhoneNumber"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -272,19 +255,13 @@
                     android:background="#485457"
                     android:textColorHint="#B3FFFFFF"
                     app:endIconMode="clear_text"
-                    android:gravity="start|center"
+                    android:gravity="center"
+                    android:hint="Телефон"
+                    android:inputType="phone"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageCard4"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="Номер телефона"
-                        android:inputType="phone" />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                    app:layout_constraintTop_toTopOf="parent"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -319,27 +296,21 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <com.google.android.material.textfield.TextInputLayout
+                <EditText
                     android:id="@+id/inputPassword"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="5dp"
                     android:background="#485457"
-                    android:gravity="center|start"
+                    android:gravity="center"
                     android:hint="Пароль"
+                    android:inputType="textPassword"
                     android:textColorHint="#B3FFFFFF"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageCard5"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:passwordToggleEnabled="true">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:inputType="textPassword" />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                    app:passwordToggleEnabled="true"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -374,28 +345,21 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <com.google.android.material.textfield.TextInputLayout
+                <EditText
                     android:id="@+id/inputConfrimPassword"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="5dp"
                     android:background="#485457"
-                    android:gravity="start|center"
+                    android:gravity="center"
                     android:hint="Пароль"
+                    android:inputType="textPassword"
                     android:textColorHint="#B3FFFFFF"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageCard6"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:passwordToggleEnabled="true">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:inputType="textPassword"
-                        android:textColor="#B3FFFFFF" />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                    app:passwordToggleEnabled="true"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -97,6 +97,7 @@
             app:layout_constraintTop_toBottomOf="@+id/totalTeams" />
 
         <ImageView
+            android:id="@+id/imageView3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -106,6 +107,22 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTimeGame" />
+
+        <TextView
+            android:id="@+id/textGameDescription"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="25dp"
+            android:text="Some description"
+            android:textSize="17sp"
+            android:textColor="#B3FFFFFF"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

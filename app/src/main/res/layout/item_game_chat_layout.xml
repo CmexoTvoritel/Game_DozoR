@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardGame"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -82,48 +83,45 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnMainGameChat"
-            android:layout_width="180dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="15dp"
             android:backgroundTint="@color/black"
             android:text="Main chat"
             android:textColor="#B3FFFFFF"
-            android:textSize="20sp"
+            android:textSize="15sp"
             app:cornerRadius="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnTeamGameChat"
-            android:layout_width="180dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:backgroundTint="@color/black"
             android:text="Team chat"
             android:textColor="#B3FFFFFF"
-            android:textSize="20sp"
+            android:textSize="15sp"
             app:cornerRadius="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnMainGameChat" />
+            app:layout_constraintEnd_toStartOf="@+id/btnHintsGameChat"
+            app:layout_constraintStart_toEndOf="@+id/btnMainGameChat"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnHintsGameChat"
-            android:layout_width="180dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
             android:backgroundTint="@color/black"
             android:text="Hints"
             android:textColor="#B3FFFFFF"
-            android:textSize="20sp"
+            android:textSize="15sp"
             app:cornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnTeamGameChat" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
         <ImageView
             android:id="@+id/imageView2"

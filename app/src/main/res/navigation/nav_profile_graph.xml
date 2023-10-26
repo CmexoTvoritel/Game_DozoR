@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.gamedozor.presentation.ui.fragments.FProfile.ProfileFragment"
+        android:name="com.example.gamedozor.presentation.ui.fragments.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

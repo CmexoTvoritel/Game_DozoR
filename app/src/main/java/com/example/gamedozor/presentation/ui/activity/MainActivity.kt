@@ -3,6 +3,7 @@ package com.example.gamedozor.presentation.ui.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.gamedozor.R
